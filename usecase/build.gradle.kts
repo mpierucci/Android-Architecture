@@ -1,6 +1,5 @@
+import properties.gitHubProperties
 import publications.GROUP_ID
-import java.io.FileInputStream
-import java.util.*
 
 plugins {
     id("kotlin")
@@ -22,8 +21,7 @@ java {
 val artifactID = "usecase"
 
 
-val githubProperties = Properties()
-githubProperties.load(FileInputStream(rootProject.file("github.properties")))
+
 
 
 publishing {
@@ -42,8 +40,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/mpierucci/Android-Architecture")
             credentials {
-                username = githubProperties.getProperty("gpr.usr") ?: System.getenv("GPR_USER")
-                password = githubProperties.getProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
+                username = project.gitHubProperties.getProperty("gpr.usr") ?: System.getenv("GPR_USER")
+                password = project.gitHubProperties.getProperty("gpr.key") ?: System.getenv("GPR_API_KEY")
             }
         }
     }
