@@ -1,2 +1,0 @@
-include ':sample-app', ':viewmodel'
-rootProject.name='Android Architecture'
