@@ -61,7 +61,7 @@ def getArtificatId = { ->
 publishing {
     publications {
         bar(MavenPublication) {
-            groupId 'com.mpierucci.android.architecture' // Replace with group ID
+            groupId 'com.mpierucci.android.architecture'
             artifactId getArtificatId()
             version getVersionName()
             artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
