@@ -19,10 +19,7 @@ java {
 }
 
 val artifactID = "usecase"
-
-
-
-
+val version = "0.1.0"
 
 publishing {
     publications {
@@ -31,7 +28,7 @@ publishing {
             from(components["java"])
             groupId = GROUP_ID
             artifactId = artifactId
-            version = "0.1.0"
+            version = version
         }
     }
 
