@@ -25,8 +25,6 @@ package com.mpierucci.android.architecture.usecase.functional
  *
  * See <a href="https://fernandocejas.com/2018/05/07/architecting-android-reloaded">Credits to Fernando Cejas.</a>
  */
-
-//TODO candidate to be replaced by arrow
 sealed class Either<out L, out R> {
     data class Left<L>(val left: L) : Either<L, Nothing>()
     data class Right<R>(val right: R) : Either<Nothing, R>()
