@@ -1,2 +1,2 @@
-include ':sample-app', ':viewmodel'
+include ':sample-app', ':viewmodel', ':usecase'
 rootProject.name='Android Architecture'
