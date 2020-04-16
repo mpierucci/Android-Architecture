@@ -13,8 +13,8 @@ object Libs {
         const val material = "com.google.android.material:material:1.1.0-beta01"
 
         object Ktx {
-            const val core = "androidx.core:core-ktx:1.1.0"
-            const val fragment = "androidx.fragment:fragment-ktx:1.2.0-rc03"
+            const val core = "androidx.core:core-ktx:1.2.0"
+            const val fragment = "androidx.fragment:fragment-ktx:1.2.4"
             const val activity = "androidx.activity:activity-ktx:1.1.0"
             const val preferences = "androidx.preference:preference-ktx:1.1.0"
             const val viewPager2 = "androidx.viewpager2:viewpager2:1.0.0"
