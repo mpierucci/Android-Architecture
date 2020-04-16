@@ -1,7 +1,5 @@
 object Libs {
-    const val kotlinVersion = "1.3.61"
-
-    const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    const val kotlinVersion = "1.3.72"
 
     const val leakCanary = "com.squareup.leakcanary:leakcanary-android:2.0-beta-3"
 

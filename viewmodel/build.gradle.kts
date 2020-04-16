@@ -31,7 +31,7 @@ dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
+    implementation(kotlin("stdlib-jdk8"))
     implementation("androidx.appcompat:appcompat:1.1.0")
     implementation("androidx.core:core-ktx:1.2.0")
     testImplementation("junit:junit:4.13")
@@ -50,7 +50,7 @@ publishing {
         register("gpr", MavenPublication::class) {
             groupId = GROUP_ID
             artifactId = artifactID
-            version = version
+            version = "0.1.2"
             artifact("$buildDir/outputs/aar/$artifactID-release.aar")
         }
     }
