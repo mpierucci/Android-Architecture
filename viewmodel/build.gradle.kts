@@ -29,28 +29,23 @@ android {
 
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-
-
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61")
-    implementation("androidx.appcompat:appcompat:1.1.0")
-    implementation("androidx.core:core-ktx:1.2.0")
-    testImplementation("junit:junit:4.13")
-    androidTestImplementation("androidx.test.ext:junit:1.1.1")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.2.0")
-    implementation("androidx.activity:activity-ktx:1.1.0")
-    implementation("androidx.fragment:fragment-ktx:1.2.2")
+    implementation(kotlin("stdlib-jdk8"))
+    implementation(Libs.AndroidX.appCompat)
+    implementation(Libs.AndroidX.Ktx.core)
+    implementation(Libs.AndroidX.Ktx.activity)
+    implementation(Libs.AndroidX.Ktx.fragment)
 }
 
 
 val artifactID = "viewmodel"
-val version = "0.1.2"
+val _version = "0.1.3"
 
 publishing {
     publications {
         register("gpr", MavenPublication::class) {
             groupId = GROUP_ID
             artifactId = artifactID
-            version = version
+            version = _version
             artifact("$buildDir/outputs/aar/$artifactID-release.aar")
         }
     }
